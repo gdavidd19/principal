@@ -1,0 +1,158 @@
+@startuml FObject
+object "jugador1" as j1 {
+    nombre = Mauricio Marquina
+    telefono = 04129392137
+    direccion = Caracas
+    numero = 1
+    posicion = Armador 
+    capitan = true
+}
+
+object "jugador2" as j2 {
+    nombre = Daniel Genova
+    telefono = 04126765675
+    direccion = Caracas
+    numero = 2
+    posicion = Opuesto
+    capitan = false
+}
+
+object "jugador3" as j3 {
+    nombre = Luis Rodriguez
+    telefono = 04241731937
+    direccion = Caracas
+    numero = 3
+    posicion = Central
+    capitan = false
+}
+
+object "jugador4" as j4 {
+    nombre = Gabriel Conde
+    telefono = 04142105891
+    direccion = Caracas
+    numero = 4
+    posicion = Libero 
+    capitan = false
+}
+
+object "jugador5" as j5 {
+    nombre = Mariangel Gomez
+    telefono = 04241444778
+    direccion = Caracas
+    numero = 5
+    posicion = Punta
+    capitan = false
+}
+
+object "jugador6" as j6 {
+    nombre = Enmanuel Quintero
+    telefono = 04263208434
+    direccion = Caracas
+    numero = 6
+    posicion = Saquero
+    capitan = false
+}
+
+object "jugador7" as j7 {
+    nombre = Anjul Hernandez
+    telefono = 04262173994
+    direccion = Bogota
+    numero = 1
+    posicion = Armador
+    capitan = true
+}
+
+object "jugador8" as j8 {
+    nombre = Cristian Ospino
+    telefono = 04242702412
+    direccion = Bogota
+    numero = 2
+    posicion = Opuesto
+    capitan = false
+}
+
+object "jugador9" as j9 {
+    nombre = Keisler Toribio
+    telefono = 04242285430
+    direccion = Bogota
+    numero = 3
+    posicion = Central
+    capitan = false
+}
+
+object "jugador10" as j10 {
+    nombre = Alanis Parra
+    telefono = 04141819871
+    direccion = Bogota
+    numero = 4
+    posicion = Libero 
+    capitan = false
+}
+
+object "jugador11" as j11 {
+    nombre = Abril Silva
+    telefono = 04128054426
+    direccion = Bogota
+    numero = 5
+    posicion = Punta
+    capitan = false
+}
+
+object "jugador12" as j12 {
+    nombre = Ana Vasquez
+    telefono = 04126023078
+    direccion = Bogota
+    numero = 6
+    posicion = Saquero
+    capitan = false
+}
+
+object "entrenador1" as t1{
+    nombre = Manuel Gonzalez
+    telefono = 04242282044
+    direccion = Caracas
+    nivelAcreditacion = 1
+}
+
+object "entrenador2" as t2{
+    nombre = Santiago Medina 
+    telefono = 04242780302
+    direccion = Bogota
+    nivelAcreditacion = 1
+}
+
+object "equipo1" as e1{
+    nombre = Equipo Venezuela
+    registro = 1
+}
+
+object "equipo2" as e2{
+    nombre = Equipo Colombia
+    registro = 2
+}
+
+object "juego" as j{
+    localidad = Chile
+    puntuacion = 3 - 0
+}
+
+j1  -left-* e1
+j2  -up-* e1
+j3  -up-* e1
+j4  -up-* e1
+j5  -up-* e1
+j6  -up-* e1
+
+j7  -right-* e2
+j8  -down-* e2 
+j9  -down-* e2 
+j10 -down-* e2 
+j11 -down-* e2 
+j12 -down-* e2
+
+t1 -right-o e1
+t2 -left-o e2
+
+e1 -up- j
+e2 -down- j
+@enduml

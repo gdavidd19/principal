@@ -1,0 +1,37 @@
+@startuml FClass
+class Equipo {
+    - nombre : string 
+    - registro : int 
+}
+
+abstract class Persona {
+    # nombre : string 
+    # telefono : string
+    # direccion : string
+}
+
+class Jugador {
+    - numero : int 
+    - posicion : string
+    - capitan : bool
+}
+
+class Entrenador {
+    - nivelAcreditacion : int
+    - experiencia : int
+}
+
+class Juego {
+    - localidad : string 
+    - puntuacion : string
+}
+
+Jugador -up-|> Persona
+Entrenador -up-|> Persona
+
+Jugador "6...20" --* "1" Equipo
+
+Entrenador "1" --o "1...*" Equipo : entrena
+
+Equipo "2" -> "1" Juego : compite en
+@enduml
