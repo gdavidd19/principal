@@ -1,0 +1,10 @@
+@startuml H
+rectangle Registro
+rectangle Venta
+rectangle Catalogo_Productos
+rectangle EspecificacionProducto
+
+Registro -down-> Catalogo_Productos : 1: inicializar() \n5:getEspecificacion()
+Registro -right-> Venta : 2:inicializar() \n 7:crearLineaVenta()
+Registro -down-> EspecificacionProducto : 6:inicializar()
+@enduml
